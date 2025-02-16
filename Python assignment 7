@@ -1,0 +1,106 @@
+import numpy as np
+
+# Create a NumPy array with numbers from 1 to 10
+arr = np.arange(1, 11)
+
+# Reshape it into a 2x5 matrix
+matrix = arr.reshape(2, 5)
+
+# Print the matrix
+
+print(matrix)
+
+
+
+
+import numpy as np
+
+# Create a NumPy array with numbers from 1 to 20
+arr = np.arange(1, 21)
+
+# Extract elements between the 5th and 15th index (excluding the 15th index)
+extracted_elements = arr[5:15]
+
+# Print the extracted elements
+print(extracted_elements)
+
+import pandas as pd
+
+# Create a Pandas Series with the given data
+fruits = pd.Series({'apples': 3, 'bananas': 2, 'oranges': 1})
+
+# Add a new item to the series
+fruits['pears'] = 4
+
+# Print the updated series
+print(fruits)
+
+
+import pandas as pd
+
+# Create a dictionary with data
+data = {
+    'name': ['Alice', 'Bob', 'Charlie', 'David', 'Emma', 'Frank', 'Grace', 'Hannah', 'Ian', 'Julia'],
+    'age': [25, 30, 22, 27, 29, 35, 28, 24, 31, 26],
+    'gender': ['Female', 'Male', 'Male', 'Male', 'Female', 'Male', 'Female', 'Female', 'Male', 'Female']
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Print DataFrame
+print(df)
+# Add a new column "occupation"
+occupations = ['Programmer', 'Manager', 'Analyst', 'Programmer', 'Manager', 'Analyst', 'Programmer', 'Manager', 'Analyst', 'Programmer']
+df['occupation'] = occupations
+
+# Print updated DataFrame
+print(df)
+
+import pandas as pd
+
+# Create a dictionary with initial data
+data = {
+    'name': ['Alice', 'Bob', 'Charlie', 'David', 'Emma', 'Frank', 'Grace', 'Hannah', 'Ian', 'Julia'],
+    'age': [25, 30, 22, 27, 29, 35, 28, 24, 31, 26],
+    'gender': ['Female', 'Male', 'Male', 'Male', 'Female', 'Male', 'Female', 'Female', 'Male', 'Female'],
+    'occupation': ['Programmer', 'Manager', 'Analyst', 'Programmer', 'Manager', 'Analyst', 'Programmer', 'Manager', 'Analyst', 'Programmer']
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Select rows where age is >= 30
+df_filtered = df[df['age'] >= 30]
+
+# Print the filtered DataFrame
+print(df_filtered)
+# Select rows where age is >= 30
+df_filtered = df[df['age'] >= 30]
+
+# Print the filtered DataFrame
+print(df_filtered)
+
+
+import pandas as pd
+
+# Create a dictionary with data
+data = {
+    'name': ['Alice', 'Bob', 'Charlie', 'David', 'Emma', 'Frank', 'Grace', 'Hannah', 'Ian', 'Julia'],
+    'age': [25, 30, 22, 27, 29, 35, 28, 24, 31, 26],
+    'gender': ['Female', 'Male', 'Male', 'Male', 'Female', 'Male', 'Female', 'Female', 'Male', 'Female'],
+    'occupation': ['Programmer', 'Manager', 'Analyst', 'Programmer', 'Manager', 'Analyst', 'Programmer', 'Manager', 'Analyst', 'Programmer']
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Convert DataFrame to CSV (save the file)
+df.to_csv('data.csv', index=False)  # 'index=False' prevents writing row indices to the CSV file
+
+# Read the CSV file back into a DataFrame
+df_read = pd.read_csv('data.csv')
+
+# Display the contents of the read DataFrame
+print(df_read)
+
